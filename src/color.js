@@ -139,6 +139,23 @@ class Color {
         hsl.h = hsl.hue
         return Color.fromHSL(hsl)
     }
+
+    invert () {
+        let r = 255 - this.rgb.red
+        let g = 255 - this.rgb.green
+        let b = 255 - this.rgb.blue
+        return new Color(r, g, b)
+    }
+
+    mix (color, weight = 0.5) {
+        let w = weight
+        let p = 1 - w
+        let r = Math.round(this.rgb.red * p + color.rgb.red * w)
+        let g = Math.round(this.rgb.green * p + color.rgb.green * w)
+        let b = Math.round(this.rgb.blue * p + color.rgb.blue * w)
+        return new Color(r, g, b)
+    }
+    
 }
 
 Color.fromHSL = function (hsl) {
