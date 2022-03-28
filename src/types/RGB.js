@@ -1,5 +1,10 @@
 const Hex = require('./Hex')
 
+// Function to outpot the input string (twice) concatted if the length of the input string is not 2
+function twoCharacters (input) {
+    return input.length === 2 ? input : input + input
+}
+
 class RGB {
     constructor(r = 0, g = 0, b = 0) {
         this.r = r
@@ -11,7 +16,7 @@ class RGB {
     }
 
     toHex () {
-        return new Hex('#' + this.r.toString(16) + this.g.toString(16) + this.b.toString(16))
+        return new Hex('#' + twoCharacters(this.r.toString(16)) + twoCharacters(this.g.toString(16)) + twoCharacters(this.b.toString(16)))
     }
 
     toRGB () {
