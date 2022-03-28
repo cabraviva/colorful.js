@@ -23,9 +23,7 @@
     "@babel/cli": "^7.11.6",
     "@babel/core": "^7.11.6",
     "@babel/preset-env": "^7.11.5",
+    "browserify": "^17.0.0",
     "uglify-js": "^3.10.4"
-  },
-  "dependencies": {
-    "browserify": "^17.0.0"
   }
 }
