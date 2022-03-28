@@ -1,6 +1,6 @@
 {
   "name": "colorful.js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Colorful.js is a javascript framework to simplify work with colors in the browser",
   "main": "dist/bundle.js",
   "scripts": {
