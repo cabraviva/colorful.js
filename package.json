@@ -1,8 +1,8 @@
 {
-  "name": "colorful.js",
+  "name": "colorfuljs-node",
   "version": "1.0.1",
   "description": "Colorful.js is a javascript framework to simplify work with colors in the browser",
-  "main": "dist/bundle.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "setup": "npm install && npm run config",
