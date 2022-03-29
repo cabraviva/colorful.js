@@ -128,6 +128,14 @@ class Color {
         return new HSL(h, s, l)
     }
 
+    toHslFunction () {
+        return `hsl(${this.hsl.hue},${this.hsl.saturation * 100}%,${this.hsl.lightness * 100}%)`
+    }
+
+    css() {
+        return this.toRgbaFunction()
+    }
+
     hueRotate (degrees) {
         let hsl = this.toHsl()
         hsl.hue += degrees
@@ -155,7 +163,7 @@ class Color {
         let b = Math.round(this.rgb.blue * p + color.rgb.blue * w)
         return new Color(r, g, b)
     }
-    
+
 }
 
 Color.fromHSL = function (hsl) {

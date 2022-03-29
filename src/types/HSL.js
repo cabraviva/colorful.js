@@ -58,6 +58,10 @@ class HSL {
         this.lightness = l
     }
 
+    luminance (value) {
+        return new HSL(this.hue, this.saturation, value)
+    }
+
     toRGB () {
         return HSLToRGB(this.h, this.s, this.l)
     }
